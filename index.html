@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Home</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css">
+<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+<style>
+	*,*::before,*::after {
+  box-sizing: border-box;
+}
+body{
+	margin: 0;
+	font-family: arial;
+	background:#fff;
+	font-size: 20px;
+	font-weight: 400;
+	line-height: 1.6;
+	color: #333;
+}
+img{
+	max-width: 100%;
+}
+body,html{
+	scroll-behavior: smooth;
+}
+.header{
+	position: fixed;
+	left: 0;
+	top:0;
+	width: 100%;
+	z-index: 100;
+	padding: 20px;
+}
+.main_nav{}
+.main_nav ul{
+	padding: 0;
+	margin: 0;
+	list-style: none;
+}
+.main_nav ul li{
+	display: inline-block;
+	margin: 0 0 0 20px;
+	font-size: 16px;
+}
+.main_nav ul li a{
+	color: #fff;
+	transition: all 0.3s ease-out;
+	text-decoration:none;
+}
+.main_nav ul li:hover a{
+	color: #f12626;
+}
+
+/*banner*/
+.banner{
+	background-color:#4bb3a1;
+	background-blend-mode: darken;
+	min-height: 100vh;
+	position: relative;
+	background-size: cover;
+	color: #fff;
+	padding: 100px 50px 100px 0;
+}
+.banner h1{
+	font-size: 60px;
+	color: #fff;
+	font-weight: 700;
+}
+.socila_links{
+	position: absolute;
+	right: 20px;
+	top:50%;
+	transform: translateY(-50%);
+	padding: 0;
+	margin: 0;
+	list-style: none;
+	font-size:22px;
+}
+.socila_links li{
+	margin: 10px 0;
+}
+.socila_links li a{
+	color: #fff
+}
+.socila_links li a:hover{
+	color: #f12626
+}
+.banner_cont{
+	padding: 30px;
+	background:rgba(134, 236, 236, 0.6);
+	
+	transform: scaleY(0);
+	animation:1s scaleAnim 1s;
+	opacity: 0;
+	animation-fill-mode: forwards;
+}
+@keyframes scaleAnim{
+	0%{transform: scaleY(0); opacity: 0;}
+	100%{transform: scaleY(1); opacity: 1; }
+}
+
+/*about-section*/
+.about-section{
+	background-color:#4bb3a1;
+	padding: 80px 20px;
+	color: #fff;		
+}
+.about-section h2{
+	font-size: 40px;
+	color: #fff;
+	margin: 0 0 30px;
+}
+.bdr-btm{
+	position: relative;
+	padding-bottom: 15px;
+}
+.bdr-btm:after{
+	content: "";
+	width: 50px;
+	height: 3px;
+	background-color: #f12626;
+	position: absolute;
+	left: 0;
+	top: 100%;
+}
+.bdr-btm.bdr-btm-center:after{
+	left: 50%;
+	margin-left: -25px;
+}
+.btn1{
+	border: 0px;
+	text-decoration: none;
+	display: inline-block;
+  color: white;
+  background: #87d4d6;
+  padding: 11px 25px;
+  margin: 0 0 15px 0;
+  font: 14px/20px "Open Sans", sans-serif;
+  height: 42px;
+  outline: none;
+  width: auto;
+  border-radius: 4px;
+  text-transform: uppercase;
+  text-align: center;
+}
+.about-box{
+
+	background:rgba(134, 236, 236, 0.6);
+	padding: 30px;
+}
+.about-box ul{
+	padding-left: 15px;
+}
+.about-box ul li{
+	margin-bottom: 20px;
+}
+.about-box h3{
+	margin-bottom: 20px;
+}
+
+
+/*portfolio-section*/
+.portfolio-section{
+	padding: 80px 0;
+	background-color:#4bb3a1;
+}
+.portfolio-section h2{
+	font-size: 40px;
+	color: #fff;
+	margin: 0 0 30px;
+}
+
+
+
+
+/*This Media Query use for Mobile View*/
+@media screen and (max-width: 767px){
+	.header{
+		padding: 20px 0;
+	}
+	.logo{
+		display: block;
+		margin: 0 auto;
+		width: 100px;
+	} 
+	.main_nav{
+		text-align: center;
+		margin-bottom: 30px;
+	} 
+	.main_nav ul li{
+		margin: 0 3px;
+	}	
+
+	.banner{
+		background-size: 200%;
+		background-position: top center;
+    background-repeat: no-repeat;
+	}
+	.banner h1{ font-size: 40px; }
+	.about-section h2{
+		font-size: 30px;
+	}
+	.about-box{
+		margin: 5px 0;
+	}
+	
+
+}
+
+
+
+
+
+</style>
+
+</head>
+<body>
+
+<header class="header">
+	<div class="container-fluid">
+		<div class="row d-flex justify-content-between">
+			<div class="col-md-auto">
+				<a href="#!" class="logo"><img src="images/logo.png"alt="logo"></a>
+			</div>
+			<div class="col-md-auto">
+				<nav class="main_nav">
+					<ul>
+						<li><a href="#home">Home</a></li>
+						<li><a href="#about">About Us</a></li>
+						<li><a href="#portfolio">Medical</a></li>
+						<li><a href="#contact">Contact Us</a></li>
+					</ul>
+				</nav>
+			</div>
+		</div>		
+	</div>
+</header>	
+
+<div class="banner d-flex align-items-center" style="background-image: url('images/banner.jpg');" id="home">
+	<ul class="socila_links">
+		<li><a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a></li>
+		<li><a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a></li>
+		<li><a href="#"><i class="fa fa-twitter" aria-hidden="true"></i></a></li>
+	</ul>	
+	<div class="container">
+		<div class="row">
+			<div class="col-md-45">
+				<div class="banner_cont">
+					<h1>Medical Profile</h1>
+					<p>i suffer .......</p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>			
+
+<div class="about-section" id="about">
+	<div class="container-fluid">
+		<div class="row">
+			<div class="col-md-5 text-justify">
+				<h2 class="bdr-btm">Our Services</h2>
+				<p>djshfs fhgsdf jdhfds iour9wt fkejng jehfwle uhtr347 5u43y57 2oqpu9 34y5y4t t43ygrehgtru iuyrh t4ht b5t56 6 65 76y 6h gfg fgrttg trrytr ytr h5h
+					hg h hth 5yetef eeryu uio9 yttj.</p>
+				<a href="" class="btn1">Contact Us</a>	
+			</div>
+			<div class="col-md">
+				<div class="about-box">
+					<h3 class="bdr-btm">Medical Issues</h3>
+					<ul>
+						<li><strong>Blood level</strong> <br> normal</li>
+						<li><strong>Heart-rate</strong> <br> normal</li>
+					
+					</ul>
+				</div>
+			</div>
+			<div class="col-md">
+				<div class="about-box">
+					<h3 class="bdr-btm">Treatment</h3>
+					<ul>
+						<li><strong>Liquid</strong> <br>max take</li>
+						<li><strong>Fruits</strong> <br> take daily</li>
+						
+					</ul>
+				</div>
+			</div>
+		</div>	
+	</div>
+</div>
+
+<div class="portfolio-section" id="portfolio">
+	<div class="container-fluid">
+		<h2 class="text-center bdr-btm bdr-btm-center">Medical Details</h2>
+		<div class="row">
+			<div class="col-md">
+				
+					<div class="about-box"  style="color: #fff;">
+						<h3 class="bdr-btm">Medical Issues</h3>
+						<ul>
+							<li><strong>Blood level</strong> <br> normal</li>
+						<li><strong>Heart-rate</strong> <br> normal</li>
+							
+						</ul>
+				
+				</div>
+			
+			</div>
+			<div class="col-md">
+				<div class="about-box"  style="color: #fff;">
+					<h3 class="bdr-btm">Medical Issues</h3>
+					<ul>
+						<li><strong>Blood level</strong> <br> normal</li>
+						<li><strong>Heart-rate</strong> <br> normal</li>
+						
+					</ul>
+			
+			</div>	
+			</div>
+			<div class="col-md">
+				<div class="about-box"  style="color: #fff;">
+					<h3 class="bdr-btm">Medical Issues</h3>
+					<ul>
+						<li><strong>Blood level</strong> <br> normal</li>
+						<li><strong>Heart-rate</strong> <br> normal</li>
+						
+					</ul>
+			
+			</div>
+		</div>
+			<div class="col-md">
+				<div class="about-box"  style="color: #fff;">
+					<h3 class="bdr-btm">Medical Issues</h3>
+					<ul>
+						<li><strong>Blood level</strong> <br> normal</li>
+						<li><strong>Heart-rate</strong> <br> normal</li>
+						
+					</ul>
+		</div>
+	</div>
+			<div class="col-md">
+				<div class="about-box" style="color: #fff;">
+					<h3 class="bdr-btm">Medical Issues</h3>
+					<ul>
+						<li><strong>Blood level</strong> <br> normal</li>
+						<li><strong>Heart-rate</strong> <br> normal</li>
+						
+					</ul>
+			
+			</div>
+		</div>
+			<div class="col-md">
+				<div class="about-box" style="color: #fff;">
+					<h3 class="bdr-btm">Medical Issues</h3>
+					<ul>
+						<li><strong>Blood level</strong> <br> normal</li>
+						<li><strong>Heart-rate</strong> <br> normal</li>
+						
+					</ul>
+			
+			</div>
+		</div>		
+			</div>
+		</div>
+	</div>
+</div>
+
+
+</body>
+</html>
